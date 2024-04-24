@@ -1,6 +1,10 @@
 package product.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 import product.entities.Product;
 import product.repositories.ProductRepository;
@@ -9,8 +13,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/products")
-public class ProductController 
-{
+public class ProductController {
+
     private final ProductRepository productRepository;
 
     @Autowired
@@ -24,8 +28,11 @@ public class ProductController
     }
 
     @GetMapping("/getAllProducts")
-    public List<Product> getAllProducts() {
-        return productRepository.findAll();
+    public Page<Product> getAllProducts(@RequestParam(defaultValue = "0") int page,
+                                        @RequestParam(defaultValue = "10") int size,
+                                        @RequestParam(defaultValue = "name") String sortBy) {
+        Pageable pageable = PageRequest.of(page, size, Sort.by(sortBy));
+        return productRepository.findAll(pageable);
     }
 
     @GetMapping("/getProductById/{id}")
@@ -49,7 +56,6 @@ public class ProductController
     }
 
     @DeleteMapping("/deleteProduct/{id}")
-  
     public void deleteProduct(@PathVariable String id) {
         Product existingProduct = productRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
@@ -58,7 +64,6 @@ public class ProductController
     }
 
     @GetMapping("/searchProducts")
-
     public List<Product> searchProducts(@RequestParam(required = false) String name,
                                         @RequestParam(required = false) String categories,
                                         @RequestParam(required = false) String attributes) {
