@@ -165,9 +165,37 @@ spring.data.mongodb.port=27019
 
 spring.data.mongodb.database=productdb
 
+**Swagger:**
+
+Swagger is a helpful tool for documenting your API (Application Programming Interface). Think of it like a manual that explains how to use your API. With Swagger, you can describe all the endpoints in your API, what kind of data they expect, and what they'll return. This makes it easier for other developers (or even yourself in the future) to understand and use your API.
+
+**Swagger UI:**
+
+Swagger UI is a web interface that automatically generates documentation for your API based on the information you provide. It's like having a website that shows all the details of your API in an easy-to-read format. With Swagger UI, developers can see all the endpoints, what data they need to send, and what they'll get back. They can even try out the endpoints right there in their web browser.
+
+**How to Use Swagger:**
+
+For the integration between spring-boot and swagger-ui, add the library to the list of your project dependencies (No additional configuration is needed) which is given below.
+
+<dependency>
+      
+      <groupId>org.springdoc</groupId>
+      
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      
+      <version>2.5.0</version>
+      
+</dependency>
+
 **Swagger Integration:**
 
-This application utilizes Swagger for API documentation. Swagger UI can be accessed at `http://localhost:27019/swagger-ui.html`.
+above dependancy will automatically deploy swagger-ui to a spring-boot application:
+
+Documentation will be available in HTML format, using the official "swagger-ui jars"
+
+The Swagger UI page will then be available at "http://server:port/context-path/swagger-ui.html" and the OpenAPI description will be available at the following url for json format: "http://server:port/context-path/v3/api-docs"
+
+Swagger UI can be accessed at `http://localhost:27019/swagger-ui.html`.
 
 **JSON representation of the Product entity:**
 
