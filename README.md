@@ -90,13 +90,18 @@ The Rating class represents a rating entity with attributes such as user ID, rat
 The Availability class represents the availability of a product with attributes indicating whether the product is in stock and its quantity.
 
 **Dependencies**
+
 **Spring Boot Starter Data MongoDB:** Provides support for MongoDB database integration.
+
 **Spring Boot Starter Web:** Enables building web applications using Spring MVC.
+
 **Springdoc OpenAPI Starter Web MVC UI:** Generates API documentation using OpenAPI.
 
 **Configuration**
 The application is configured to connect to a MongoDB database hosted locally. The MongoDB host is set to localhost with the default port 27019, and the database name is productdb.
+
 **Setting up the MongoDB Database:**
+
 **1. Install MongoDB:** If you haven't already installed MongoDB, download and install it from the official MongoDB website (MongoDB Download).
 
 **2. Start MongoDB Server:** Start the MongoDB server by running the following command in your terminal or command prompt: mongod
