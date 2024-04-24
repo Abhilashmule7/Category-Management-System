@@ -133,7 +133,7 @@ _**Seeding the Database with Initial Data:**_
 
 **1. Insert Initial Data:** Use the MongoDB shell or a script to insert some initial data into the products collection. Here's an example of how you can insert a sample product document into the products collection:
 
-_Example_
+**_Example_:**
 
 db.products.insertOne(
       {
@@ -160,7 +160,8 @@ Update the MongoDB configuration in your application properties or YAML file to 
 **Swagger Integration:**
 
 This application utilizes Swagger for API documentation. Swagger UI can be accessed at `http://localhost:27019/swagger-ui.html`.
-_Example_
+
+**_Example_:**
 spring.data.mongodb.host=localhost
 spring.data.mongodb.port=27019
 spring.data.mongodb.database=productdb
