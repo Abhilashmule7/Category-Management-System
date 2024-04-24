@@ -157,10 +157,6 @@ db.products.insertOne(
 
 Update the MongoDB configuration in your application properties or YAML file to connect to the newly created productdb database. Here's an example of how you can configure the connection:
 
-**Swagger Integration:**
-
-This application utilizes Swagger for API documentation. Swagger UI can be accessed at `http://localhost:27019/swagger-ui.html`.
-
 **_Example_:**
 
 spring.data.mongodb.host=localhost
@@ -169,6 +165,9 @@ spring.data.mongodb.port=27019
 
 spring.data.mongodb.database=productdb
 
+**Swagger Integration:**
+
+This application utilizes Swagger for API documentation. Swagger UI can be accessed at `http://localhost:27019/swagger-ui.html`.
 
 **JSON representation of the Product entity:**
 
