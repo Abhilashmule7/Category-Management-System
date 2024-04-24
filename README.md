@@ -17,6 +17,7 @@ _**Features**_
 _**Components**_ 
 
 **1. ProductController**
+
 The 'ProductController class' located in the "product.controller package" handles HTTP requests related to product management including adding, updating, deleting, and searching for products. The ProductController class in the product.controller package handles HTTP requests related to product management within the Product Catalogue Management Application.
 
 _**Endpoints**_
@@ -81,15 +82,19 @@ sortBy (optional, default: "name"): Field to sort by.
 **Response:** List of product objects matching the search criteria.
 
 **2. ProductRepository**
+
 The ProductRepository interface provides methods to interact with the MongoDB database for CRUD operations on products.
 
 **3. Product Entity**
+
 The Product class represents a product entity with attributes such as ID, name, description, price, categories, and attributes.
 
 **4. Rating Entity**
+
 The Rating class represents a rating entity with attributes such as user ID, rating value, and comments.
 
 **5. Availability Entity**
+
 The Availability class represents the availability of a product with attributes indicating whether the product is in stock and its quantity.
 
 _**Dependencies**_
