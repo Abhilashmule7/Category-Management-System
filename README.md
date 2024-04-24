@@ -157,6 +157,7 @@ spring.data.mongodb.database=productdb
 
 
 **JSON representation of the Product entity**
+
 {
   "id": "1",
   "name": "Product Name",
