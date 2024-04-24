@@ -188,6 +188,7 @@ spring.data.mongodb.database=productdb
 **This JSON represents a single product with the following attributes:**
 
 This JSON structure corresponds to the fields defined in the Product class. Each instance of the Product entity in your application would have similar attributes with corresponding values.
+
 **id:** A unique identifier for the product.
 
 **name:** The name of the product.
