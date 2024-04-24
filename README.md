@@ -162,8 +162,11 @@ Update the MongoDB configuration in your application properties or YAML file to 
 This application utilizes Swagger for API documentation. Swagger UI can be accessed at `http://localhost:27019/swagger-ui.html`.
 
 **_Example_:**
+
 spring.data.mongodb.host=localhost
+
 spring.data.mongodb.port=27019
+
 spring.data.mongodb.database=productdb
 
 
