@@ -17,43 +17,65 @@ This is a Product Catalogue Management Application. The Product Catalogue Manage
 The 'ProductController class' located in the "product.controller package" handles HTTP requests related to product management including adding, updating, deleting, and searching for products. The ProductController class in the product.controller package handles HTTP requests related to product management within the Product Catalogue Management Application.
 
 **Endpoints**
+
 **1. Add Product**
-Endpoint: 'POST /api/products/addProduct'
+**Endpoint:** 'POST /api/products/addProduct'
 
-Description: Adds a new product to the catalogue.
+**Description:** Adds a new product to the catalogue.
 
-Request Body: Product object.
+**Request Body:** Product object.
 
-Response: Added product object.
+**Response:** Added product object.
 
 **2. Get All Products**
-Endpoint: 'GET /api/products/getAllProducts'
-Description: Retrieves a paginated list of all products from the catalogue.
-Query Parameters:
+**Endpoint:** 'GET /api/products/getAllProducts'
+
+**Description:** Retrieves a paginated list of all products from the catalogue.
+
+**Query Parameters:**
 page (optional, default: 0): Page number.
+
 size (optional, default: 10): Number of items per page.
+
 sortBy (optional, default: "name"): Field to sort by.
-Response: Paginated list of product objects.
+
+**Response:** Paginated list of product objects.
+
 **3. Get Product by ID**
-Endpoint: 'GET /api/products/getProductById/{id}'
-Description: Retrieves a product by its ID.
-Path Variable: Product ID.
-Response: Product object with the specified ID.
+**Endpoint:** 'GET /api/products/getProductById/{id}'
+
+**Description:** Retrieves a product by its ID.
+
+**Path Variable:** Product ID.
+
+**Response:** Product object with the specified ID.
+
 **4. Update Product**
-Endpoint: 'PUT /api/products/updateProduct/{id}'
-Description: Updates an existing product.
-Path Variable: Product ID.
-Request Body: Updated product object.
-Response: Updated product object.
+**Endpoint:** 'PUT /api/products/updateProduct/{id}'
+
+**Description:** Updates an existing product.
+
+**Path Variable:** Product ID.
+
+**Request Body:** Updated product object.
+
+**Response:** Updated product object.
+
 **5. Delete Product**
-Endpoint: 'DELETE /api/products/deleteProduct/{id}'
-Description: Deletes an existing product.
-Path Variable: Product ID.
+**Endpoint:** 'DELETE /api/products/deleteProduct/{id}'
+
+**Description:** Deletes an existing product.
+
+**Path Variable:** Product ID.
+
 **6. Search Products**
-Endpoint: 'GET /api/products/searchProducts'
-Description: Searches for products based on various criteria such as name, categories, and attributes.
-Query Parameters: Can include name, categories, and attributes.
-Response: List of product objects matching the search criteria.
+**Endpoint:** 'GET /api/products/searchProducts'
+
+**Description:** Searches for products based on various criteria such as name, categories, and attributes.
+
+**Query Parameters:** Can include name, categories, and attributes.
+
+**Response:** List of product objects matching the search criteria.
 
 **2. ProductRepository**
 The ProductRepository interface provides methods to interact with the MongoDB database for CRUD operations on products.
@@ -76,10 +98,13 @@ The Availability class represents the availability of a product with attributes 
 The application is configured to connect to a MongoDB database hosted locally. The MongoDB host is set to localhost with the default port 27019, and the database name is productdb.
 **Setting up the MongoDB Database:**
 **1. Install MongoDB:** If you haven't already installed MongoDB, download and install it from the official MongoDB website (MongoDB Download).
+
 **2. Start MongoDB Server:** Start the MongoDB server by running the following command in your terminal or command prompt: mongod
-Above command will start the MongoDB server locally on the default port (27017), but our port is 27019
+Above command will start the MongoDB server locally on the default port (27017), but our port is 27019.
+
 **3. Access MongoDB Shell:** Open a new terminal or command prompt window and access the MongoDB shell by running the following command:mongosh or mongo
 This will open the MongoDB shell, where you can interact with the MongoDB database.
+
 **4. Create Database:** Create a new database named productdb by running the following command in the MongoDB shell: use productdb
 This command switches to the productdb database. If the database doesn't exist, MongoDB will create it.
 
@@ -131,8 +156,13 @@ spring.data.mongodb.database=productdb
 **This JSON represents a single product with the following attributes:**
 This JSON structure corresponds to the fields defined in the Product class. Each instance of the Product entity in your application would have similar attributes with corresponding values.
 **id:** A unique identifier for the product.
+
 **name:** The name of the product.
+
 **description:** A description of the product.
+
 **price:** The price of the product.
+
 **categories**: An array of categories to which the product belongs.
+
 **attributes:** Additional attributes of the product, stored as key-value pairs.
