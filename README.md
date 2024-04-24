@@ -106,6 +106,7 @@ _**Dependencies**_
 **3. Springdoc OpenAPI Starter Web MVC UI:** Generates API documentation using OpenAPI.
 
 _**Configuration**_
+
 The application is configured to connect to a MongoDB database hosted locally. The MongoDB host is set to localhost with the default port 27019, and the database name is productdb.
 
 _**Setting up the MongoDB Database:**_
@@ -143,9 +144,11 @@ db.products.insertOne(
 **3. Additional Seeding:** Repeat the insertion process for any additional initial data you want to seed into the database.
 
 **Configuration Update:**
+
 Update the MongoDB configuration in your application properties or YAML file to connect to the newly created productdb database. Here's an example of how you can configure the connection:
 
 **Swagger Integration**
+
 This application utilizes Swagger for API documentation. Swagger UI can be accessed at `http://localhost:27019/swagger-ui.html`.
 _Example_
 spring.data.mongodb.host=localhost
