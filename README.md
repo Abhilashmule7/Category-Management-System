@@ -1,8 +1,11 @@
 # Product-Catalogue-Management
-**Overview**
+
+_**Overview**_
+
 This is a Product Catalogue Management Application. The Product Catalogue Management application is a structured product catalogue system built using Spring Boot. It provides functionalities to manage products, including adding, updating, deleting, and searching for products.
 
 _**Features**_
+
 **1. Add Product:** Add new products to the catalogue with details such as name, description, price, categories, and attributes.
 
 **2. Update Product:** Update existing product details, including name, description, price, categories, and attributes.
