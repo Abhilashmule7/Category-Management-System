@@ -4,8 +4,11 @@ This is a Product Catalogue Management Application. The Product Catalogue Manage
 
 **Features**
 **Add Product:** Add new products to the catalogue with details such as name, description, price, categories, and attributes.
+
 **Update Product:** Update existing product details, including name, description, price, categories, and attributes.
+
 **Delete Product:** Remove products from the catalogue.
+
 **Search Products:** Search for products based on various criteria such as name, categories, and attributes.
 
 **Components**
@@ -16,9 +19,13 @@ The 'ProductController class' located in the "product.controller package" handle
 **Endpoints**
 **1. Add Product**
 Endpoint: 'POST /api/products/addProduct'
+
 Description: Adds a new product to the catalogue.
+
 Request Body: Product object.
+
 Response: Added product object.
+
 **2. Get All Products**
 Endpoint: 'GET /api/products/getAllProducts'
 Description: Retrieves a paginated list of all products from the catalogue.
