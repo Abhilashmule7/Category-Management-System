@@ -132,18 +132,22 @@ This command switches to the productdb database. If the database doesn't exist, 
 _**Seeding the Database with Initial Data:**_
 
 **1. Insert Initial Data:** Use the MongoDB shell or a script to insert some initial data into the products collection. Here's an example of how you can insert a sample product document into the products collection:
+
 _Example_
+
 db.products.insertOne(
-{
-  "name": "Sample Product",
-  "description": "This is a sample product.",
-  "price": 19.99,
-  "categories": ["Sample Category"],
-  "attributes": {
-    "attribute1": "value1",
-    "attribute2": "value2"
-  }
-});
+      {
+        "name": "Product Name",
+        "description": "Product Description",
+        "price": 99.99,
+        "categories": ["Category1", "Category2"],
+        "attributes":
+        {
+          "attribute1": "value1",
+          "attribute2": "value2"
+        }
+      }
+);
 
 **2. Verify Data:** After inserting the initial data, you can verify that it has been successfully added to the database by querying the products collection: db.products.find()
 
@@ -165,16 +169,16 @@ spring.data.mongodb.database=productdb
 **JSON representation of the Product entity:**
 
 {
-  "id": "1",
-  "name": "Product Name",
-  "description": "Product Description",
-  "price": 99.99,
-  "categories": ["Category1", "Category2"],
-  "attributes":
-  {
-    "attribute1": "value1",
-    "attribute2": "value2"
-  }
+    "id": "1",
+    "name": "Product Name",
+    "description": "Product Description",
+    "price": 99.99,
+    "categories": ["Category1", "Category2"],
+    "attributes":
+    {
+      "attribute1": "value1",
+      "attribute2": "value2"
+    }
 }
 
 **This JSON represents a single product with the following attributes:**
