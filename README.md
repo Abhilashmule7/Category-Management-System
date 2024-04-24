@@ -2,21 +2,21 @@
 **Overview**
 This is a Product Catalogue Management Application. The Product Catalogue Management application is a structured product catalogue system built using Spring Boot. It provides functionalities to manage products, including adding, updating, deleting, and searching for products.
 
-**Features**
-**Add Product:** Add new products to the catalogue with details such as name, description, price, categories, and attributes.
+_**Features**_
+**1. Add Product:** Add new products to the catalogue with details such as name, description, price, categories, and attributes.
 
-**Update Product:** Update existing product details, including name, description, price, categories, and attributes.
+**2. Update Product:** Update existing product details, including name, description, price, categories, and attributes.
 
-**Delete Product:** Remove products from the catalogue.
+**3. Delete Product:** Remove products from the catalogue.
 
-**Search Products:** Search for products based on various criteria such as name, categories, and attributes.
+**4. Search Products:** Search for products based on various criteria such as name, categories, and attributes.
 
-**Components**
+_**Components**_ 
 
 **1. ProductController**
 The 'ProductController class' located in the "product.controller package" handles HTTP requests related to product management including adding, updating, deleting, and searching for products. The ProductController class in the product.controller package handles HTTP requests related to product management within the Product Catalogue Management Application.
 
-**Endpoints**
+_**Endpoints**_
 
 **1. Add Product**
 **Endpoint:** 'POST /api/products/addProduct'
@@ -89,18 +89,18 @@ The Rating class represents a rating entity with attributes such as user ID, rat
 **5. Availability Entity**
 The Availability class represents the availability of a product with attributes indicating whether the product is in stock and its quantity.
 
-**Dependencies**
+_**Dependencies**_
 
-**Spring Boot Starter Data MongoDB:** Provides support for MongoDB database integration.
+**1. Spring Boot Starter Data MongoDB:** Provides support for MongoDB database integration.
 
-**Spring Boot Starter Web:** Enables building web applications using Spring MVC.
+**2. Spring Boot Starter Web:** Enables building web applications using Spring MVC.
 
-**Springdoc OpenAPI Starter Web MVC UI:** Generates API documentation using OpenAPI.
+**3. Springdoc OpenAPI Starter Web MVC UI:** Generates API documentation using OpenAPI.
 
-**Configuration**
+_**Configuration**_
 The application is configured to connect to a MongoDB database hosted locally. The MongoDB host is set to localhost with the default port 27019, and the database name is productdb.
 
-**Setting up the MongoDB Database:**
+_**Setting up the MongoDB Database:**_
 
 **1. Install MongoDB:** If you haven't already installed MongoDB, download and install it from the official MongoDB website (MongoDB Download).
 
@@ -114,7 +114,8 @@ This will open the MongoDB shell, where you can interact with the MongoDB databa
 This command switches to the productdb database. If the database doesn't exist, MongoDB will create it.
 
 
-**Seeding the Database with Initial Data:**
+_**Seeding the Database with Initial Data:**_
+
 **1. Insert Initial Data:** Use the MongoDB shell or a script to insert some initial data into the products collection. Here's an example of how you can insert a sample product document into the products collection:
 _Example_
 db.products.insertOne(
@@ -159,6 +160,7 @@ spring.data.mongodb.database=productdb
 }
 
 **This JSON represents a single product with the following attributes:**
+
 This JSON structure corresponds to the fields defined in the Product class. Each instance of the Product entity in your application would have similar attributes with corresponding values.
 **id:** A unique identifier for the product.
 
